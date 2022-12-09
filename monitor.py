@@ -1,6 +1,5 @@
 import requests
 import time
-# from playsound import playsound
 
 f = open('usernames.txt').read().strip()
 usernames = [x for x in f.split('\n')]
@@ -22,7 +21,6 @@ while True:
 		if result["valid"] == False:
 			print(username + ' is taken')
 		elif result["valid"] == True:
-			# playsound("notification.wav")
 			print(username + ' is available')
 		else:
 			print('error: ' + str(response.status_code))
